@@ -1,38 +1,242 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great');
+@import url("https://fonts.googleapis.com/css?family=Calistoga|Lancelot");
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  outline:none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* -------------------------------------------------------FOOTER------------------------------------------------------- */
+footer{
+position:absolute;
+bottom:0;
+width:100%;
+padding-top:50px;
+display:flex;
+justify-content: center;
+align-items: center;
+column-gap: 50px;
+padding-bottom: 2vh;
+
+}
+/* ------------------------------------------------------BODY------------------------------------------------------ */
+body{
+  margin:0;
+  background-color: rgb(0, 0, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p{
+  text-align: justify;
+  font-size:1.3rem;
+  width: 60vw;
+  color:rgb(211, 206, 206);
+  font-family: 'Lancelot';
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* -------------------------------------------------TITRES------------------------------------------------- */
+h1{
+  font-family: 'Calistoga';
+  font-size: 3rem;
+  color:rgb(211, 206, 206);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom:0.5rem;
+
+}
+h2{
+  font-family: 'Lancelot';
+  font-size:1.9rem;
+}
+.main{
+  display:flex;
+  flex-direction:column;
+  min-height:80vh;
+  padding: 4.5rem 3rem 1rem 3rem;
+  justify-content: center;
+  align-items: center;
+  color:rgb(211, 206, 206);
+}
+.main p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* -------------------------------------------------NAVIGATION & LIENS------------------------------------------------- */
+ul{
+  list-style-type: none;
+  font-family: 'Fredericka the Great',cursive ;
+  padding:0;
+  margin:0;
+}
+a{
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position:fixed;
+  width:100vw;
+  min-height:75px;
+  padding:0.5rem;
+  background-color: rgb(0, 0, 0);
+  color:rgb(211, 206, 206);
+}
+
+.navbar-links {
+  width:100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 150px;
+  font-family: 'Fredericka the Great',cursive ;
+  /* font-size: 2.3em; */
+}
+.link{
+  padding:0 0.3rem;
+  color:inherit;
+}
+.navbar a{
+  color:rgb(211, 206, 206);
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  font-size: 1.8rem;
+}
+.navbar a:hover{
+  transform:scale(3.5);
+}
+
+.navbar_burger{
+  width:40px;
+  height:40px;
+  background:transparent;
+  border:none;
+  color:inherit;
+  display:none;
+}
+
+/* ----------------------------------------------------ICONES---------------------------------------------------- */
+svg{
+  background-color:rgb(0, 0, 0);
+  color:rgb(211, 206, 206);
+}
+.icon{
+  color:rgb(211, 206, 206);
+  background-color: transparent;
+  width:400px;
+  height:400px;
+}
+.portrait{
+  width:450px;
+  height:auto;
+}
+
+/* ------------------------------------------------RESPONSIVE------------------------------------------------ */
+
+
+@media screen and (max-width:767px){
+  .navbar{
+    justify-content: flex-end;
   }
-  to {
-    transform: rotate(360deg);
+  h1{
+    font-size: 2rem;
+
   }
+  .navbar-links{
+    display:flex;
+    flex-direction: column;
+    row-gap:50px;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom:0;
+    height:100vh;
+    padding:2rem;
+    background-color:black;
+
+    right:-100vw;
+    bottom:0;
+    visibility:hidden;
+    transition: all .8s ease-in-out;
+  }
+  .show-nav .navbar-links{
+    width:100vw;
+    right:0;
+    visibility:visible;
+
+  }
+  .navbar_burger{
+    display: block;
+  }
+  .navbar_burger:hover{
+    cursor:pointer;
+    position:fixed;
+    top:1rem;
+    right:1rem;
+  }
+  .burger-bar,
+  .burger-bar::before,
+  .burger-bar::after{
+  display:block;
+  width:40px;
+  height:3px;
+  position:relative;
+  border-radius:3px;
+  background:rgb(211, 206, 206);
+  transition: all .5s ease-in-out;
+  }
+  
+  .burger-bar::before,
+  .burger-bar::after{
+    content:"";
+    position:absolute;
+    left:0;
+  }
+  .burger-bar::before{
+    transform:translateY(-12px);
+  }
+  .burger-bar::after{
+    transform:translateY(12px);
+  }
+  .show-nav .burger-bar{
+    background-color: transparent;
+  }
+  .show-nav .burger-bar::before{
+    transform:rotate(45deg);
+  }
+  .show-nav .burger-bar::after{
+    transform:rotate(-45deg);
+  }
+  .navbar-items::after{
+    content:"";
+    display:block;
+    margin:0 auto;
+    margin-top:50px;
+    width:3vw;
+    height:1px;
+    background:rgb(211, 206, 206);
+  }
+  .navbar-items:last-child::after{
+    display:none;
+  }
+}
+
+#contacttextarea{
+  width:80vw;
+  background-color: rgb(211, 206, 206);
+  border:3px solid rgb(211, 206, 206);
+  border-radius: 10px;
+}
+.btnSubmit{
+  width:250px;
+  height:50px;
+  border-radius: 10px;
+}
+.contactmail{
+  font-size: 1.5rem;
 }

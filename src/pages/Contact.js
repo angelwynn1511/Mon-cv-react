@@ -2,11 +2,10 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="main">
+      <h1>Contactez-moi</h1>
       <form action="#" method="post">
-        <label htmlFor="texte">
-          <strong> Envoyez-moi un hibou!</strong>
-        </label>
+        <label htmlFor="texte"></label>
         <br />
         <textarea
           id="contacttextarea"
@@ -14,12 +13,11 @@ const Contact = () => {
           cols="100"
           rows="15"
           required
-          placeholder="Si vous croisez Dumbledore, dites-lui que j'attends toujours ma lettre pour Poudlard.
-            En attendant, vous pouvez toujours m'écrire ici..."
+          placeholder="Ecrivez votre texte ici..."
         ></textarea>
         <br />
       </form>
-      <input type="submit" value="Envoyer" />
+      <input className="btnSubmit" type="submit" value="Envoyer" />
       <br />
       <br />
       <div className="contactmail">

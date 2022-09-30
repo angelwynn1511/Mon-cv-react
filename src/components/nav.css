@@ -1,0 +1,41 @@
+
+@media screen and(max-width:767px){
+    .navbar-links{
+      display:flex;
+      flex-direction: column;
+      background-color:rgb(38, 255, 0);
+    }
+    .navbar-burger{
+      display: block;
+    }
+    .navbar-burger:hover{
+      cursor:pointer;
+      position:fixed;
+      top:1rem;
+      right:1rem;
+    }
+    .burger-bar,
+    .burger-bar::before,
+    .burger-bar::after{
+    display:block;
+    width:40px;
+    height:40px;
+    position:relative;
+    border-radius:3px;
+    background:white;
+    }
+    
+    .burger-bar::before,
+    .burger-bar::after{
+      content:"";
+      position:absolute;
+      left:0;
+    }
+    .burger-bar::before{
+      transform:translateY(-12px);
+    }
+    .burger-bar::after{
+      transform:translateY(12px);
+    
+    }
+  }

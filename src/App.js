@@ -10,13 +10,13 @@ import Contact from "./pages/Contact";
 import SharedLayout from "./pages/SharedLayout";
 // import logo from "./logo.svg";
 import "./App.css";
-
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="dark">
       <Router>
         <Routes>
           <Route path="/" element={<SharedLayout />}>
+
             <Route index element={<Home />} />
 
             {/* J'insère dans ma route Home mes routes About et error */}
