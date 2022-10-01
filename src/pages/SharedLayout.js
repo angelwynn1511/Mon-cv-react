@@ -6,7 +6,9 @@ import { Outlet } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+
 const SharedLayout = () => {
+
   return (
     <>
       <Navbar />

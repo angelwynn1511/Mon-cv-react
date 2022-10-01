@@ -7,7 +7,15 @@
   padding:0;
   outline:none;
 }
-
+.switch{
+  position:sticky;
+  transform:rotate(90deg);
+  top:25px;
+  /* left:100%; */
+}
+.moonIcon{
+  transform:rotate(-90deg);
+}
 /* -------------------------------------------------------FOOTER------------------------------------------------------- */
 footer{
 position:absolute;
@@ -224,8 +232,13 @@ svg{
   .navbar-items:last-child::after{
     display:none;
   }
+  footer{
+    z-index: -1;
+  }
 }
-
+#light{
+  background-color:rgb(49, 123, 150);
+}
 #contacttextarea{
   width:80vw;
   background-color: rgb(211, 206, 206);
