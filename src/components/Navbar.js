@@ -13,7 +13,7 @@ const Navbar = () => {
       <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"} `}>
           <ul className="navbar-links">
             <li className="navbar-items">
-              <NavLink
+              <NavLink onClick={handleShowLinks}
                 to="/presentation"
                 className={({ isActive }) => (isActive ? "link active" : "link")}
                 >
@@ -21,7 +21,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="navbar-items">
-              <NavLink
+              <NavLink onClick={handleShowLinks}
                 to="/parcours"
                 className={({ isActive }) => (isActive ? "link active" : "link")}
               >
@@ -29,7 +29,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="navbar-items">
-              <NavLink
+              <NavLink onClick={handleShowLinks}
                 to="/home"
                 className={({ isActive }) => (isActive ? "link active" : "link")}
                 >
@@ -37,7 +37,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="navbar-items">
-              <NavLink
+              <NavLink onClick={handleShowLinks}
                 to="/portfolio"
                 className={({ isActive }) => (isActive ? "link active" : "link")}
                 >
@@ -45,7 +45,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="navbar-items">
-              <NavLink
+              <NavLink onClick={handleShowLinks}
                 to="/contact"
                 className={({ isActive }) => (isActive ? "link active" : "link")}
                 >
